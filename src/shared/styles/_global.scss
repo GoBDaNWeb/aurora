@@ -1,0 +1,186 @@
+.container {
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 40px;
+	padding-right: 40px;
+	width: 100%;
+	@media (max-width: 1024px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+button {
+	font-family: 'Montserrat', sans-serif;
+}
+body {
+	background: var(--white-color);
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	color: var(--blue-color);
+}
+
+.dp__main.error {
+	.dp__input_wrap {
+		input {
+			border-color: var(--pink-back-color);
+		}
+	}
+}
+.dp__input_wrap {
+	input {
+		border: none;
+		border: 1px solid var(--gray-line-color);
+		border-radius: 10px;
+		padding: 19px 24px;
+		height: 50px;
+	}
+	.dp__input_icon {
+		padding: 0;
+		right: 19px;
+		left: auto;
+		width: 28px;
+		height: 21px;
+		top: 24px;
+	}
+	input::placeholder {
+		color: var(--black-color);
+		opacity: 1;
+	}
+	.dp__clear_icon {
+		display: none;
+	}
+}
+.dp__menu {
+	border-radius: 20px;
+}
+.dp__outer_menu_wrap {
+	.dp__active_date {
+		background-color: var(--pink-color);
+	}
+	.dp__today {
+		border-color: var(--pink-color);
+	}
+	.dp__button_bottom {
+		display: none;
+	}
+}
+.ymaps-2-1-79-gotoymaps {
+	display: none !important;
+}
+.ymaps-2-1-79-gototech {
+	display: none !important;
+}
+.ymaps-2-1-79-copyright {
+	display: none !important;
+}
+.ymaps-2-1-79-gototaxi {
+	display: none !important;
+}
+.swiper-button-disabled {
+	opacity: 0;
+}
+.swiper-pagination.pink {
+	.swiper-pagination-bullet {
+		background: var(--pink-light-back-color);
+	}
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 45px;
+		height: 45px;
+		border-radius: 999px;
+		z-index: 2;
+		transition: var(--trs-300);
+
+		img {
+			width: 16px;
+			height: fit-content;
+			object-fit: contain;
+		}
+	}
+}
+.pagination-number {
+	width: fit-content !important;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 37px;
+	font-family: 'ElMessiri', sans-serif;
+}
+.pagination-line {
+	width: 100%;
+	display: flex;
+	gap: 14px;
+	.swiper-pagination-bullet {
+		width: 100%;
+		border-radius: 0;
+		opacity: 0.5 !important;
+		background: var(--white-color) !important;
+		transition: var(--trs-300);
+		height: 5px;
+		z-index: 2;
+	}
+	.swiper-pagination-bullet-active {
+		width: 100%;
+		background: var(--white-color) !important;
+		opacity: 1 !important;
+		z-index: 2;
+	}
+}
+.swiper-pagination.blue {
+	.swiper-pagination-bullet-active {
+		background: var(--blue-color) !important;
+	}
+	.swiper-pagination-bullet {
+		background: var(--white-color);
+	}
+}
+.swiper-pagination {
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	width: 100%;
+	position: relative;
+	bottom: 0 !important;
+	top: 0 !important;
+	display: none;
+	@media (max-width: $tab) {
+		display: flex;
+	}
+	.swiper-pagination-bullet-active {
+		background: var(--gold-color) !important;
+	}
+	.swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		background: #dedede;
+		transition: var(--trs-300);
+		opacity: 1;
+	}
+}
+@keyframes slidein {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+@keyframes scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(-100% - 20px));
+	}
+}

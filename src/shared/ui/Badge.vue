@@ -1,0 +1,19 @@
+<script setup></script>
+
+<template>
+	<div class="badge"><slot></slot></div>
+</template>
+
+<style lang="scss" scoped>
+.badge {
+	background: var(--white-color);
+	border-radius: 8px;
+	height: 28px;
+	padding: 0 6px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: var(--black-color);
+	width: fit-content;
+}
+</style>
