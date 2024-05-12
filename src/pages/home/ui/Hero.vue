@@ -52,7 +52,7 @@ import { Title } from '@/shared/ui';
 		}
 	}
 	.hero-form {
-		background-image: url('./images/home/hero.jpg');
+		background-image: url('../images/home/hero.jpg');
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -64,7 +64,7 @@ import { Title } from '@/shared/ui';
 		@media (max-width: $tab) {
 			margin-top: 35px;
 			height: auto;
-			background-image: url('./images/home/hero-mob.jpg');
+			background-image: url('../images/home/hero-mob.jpg');
 			background-position: top;
 		}
 		.hero-form-wrapper {
