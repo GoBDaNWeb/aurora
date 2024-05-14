@@ -70,7 +70,7 @@ const formValues = reactive({
 					line-height: 22px;
 				}
 				input {
-					border: 1px solid var(--blue-color);
+					border: 1px solid var(--green-color);
 					&::placeholder {
 						color: #afafaf;
 					}

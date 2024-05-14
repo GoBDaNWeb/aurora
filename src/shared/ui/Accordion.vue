@@ -64,7 +64,6 @@ function handleAccordion(selectedIndex) {
 
 .accordion.active {
 	.btn-wrapper {
-		background: var(--sky-color);
 		button {
 			span {
 				&:after {
@@ -85,7 +84,7 @@ function handleAccordion(selectedIndex) {
 		gap: 20px;
 		padding: 21px 25px;
 		border-radius: 8px;
-		background: var(--sky-light-color);
+		background: var(--green-light-color);
 		transition: var(--trs-300);
 		@media (max-width: $tab) {
 			gap: 15px;
@@ -145,7 +144,10 @@ function handleAccordion(selectedIndex) {
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 22px;
-			padding-top: 20px;
+			margin-top: 20px;
+			background: var(--green-light-2-color);
+			padding: 25px;
+			border-radius: 8px;
 		}
 	}
 }

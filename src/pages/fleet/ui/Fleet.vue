@@ -17,4 +17,32 @@ import { boats } from '../config';
 	</main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@import '@/shared/styles/vars';
+
+.fleet-page {
+	.cards-list-wrapper {
+		.cards-list {
+			.boat-card {
+				.swiper {
+					max-width: 420px;
+					padding-bottom: 65%;
+					position: relative;
+					@media (max-width: $tab) {
+						max-width: 480px;
+					}
+					@media (max-width: $tab-sm) {
+						max-width: 767px;
+					}
+					.swiper-wrapper {
+						position: absolute;
+					}
+					.swiper-slide {
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+}
+</style>

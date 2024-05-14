@@ -102,7 +102,7 @@ const pagination = ref(null);
 @import '@/shared/styles/vars';
 
 .service {
-	background: var(--sky-color);
+	background: var(--green-light-color);
 	padding-bottom: 130px;
 	position: relative;
 	overflow: hidden;

@@ -21,10 +21,6 @@ const setSwiperRef = swiper => {
 	swiperRef.value = swiper;
 };
 
-// onMounted(() => {
-// 	swiperRef.value.activeIndex = 1;
-// });
-
 const handleSelectTab = index => {
 	currentTab.tab = index;
 	const filteredEvents = props.events.filter(event => {
@@ -105,7 +101,7 @@ const handleSelectTab = index => {
 	</div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/shared/styles/vars';
 
 .events {
@@ -143,9 +139,15 @@ const handleSelectTab = index => {
 			& > .swiper-wrapper {
 				& > .swiper-slide {
 					opacity: 0.5 !important;
+					.emoji-wrapper {
+						opacity: 0 !important;
+					}
 				}
 				& > .swiper-slide-active {
 					opacity: 1 !important;
+					.emoji-wrapper {
+						opacity: 1 !important;
+					}
 				}
 			}
 			.swiper-slide {

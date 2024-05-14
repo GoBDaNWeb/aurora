@@ -36,7 +36,7 @@ button.primary {
 	}
 }
 button.secondary {
-	background: var(--sky-3-color);
+	background: var(--green-2-color);
 	border-radius: 8px;
 	height: 48px;
 	padding: 0 30px;
@@ -47,7 +47,7 @@ button.secondary {
 	color: var(--white-color);
 	transition: var(--trs-300);
 	&:hover {
-		background: var(--sky-2-color);
+		background: var(--green-color);
 	}
 }
 button.outline {

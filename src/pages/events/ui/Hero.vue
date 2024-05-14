@@ -31,13 +31,21 @@ const handleSelectTab = index => {
 </template>
 
 <style lang="scss" scoped>
+@import '@/shared/styles/vars';
+
 .hero {
 	margin-top: 67px;
+	@media (max-width: $tab) {
+		margin-top: 40px;
+	}
 	.tabs-wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-top: 70px;
+		@media (max-width: $tab) {
+			margin-top: 30px;
+		}
 		.tabs {
 			border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 			display: flex;

@@ -1,3 +1,5 @@
+import { PATH_PAGE } from '@/shared/config';
+
 export const boats = [
 	{
 		imgs: [
@@ -19,7 +21,7 @@ export const boats = [
 				text: 'Реки и каналы, Нева, Малая и большая Невка, Финский залив'
 			}
 		],
-		url: '/',
+		url: `${PATH_PAGE.fleet}/fleet1`,
 		badges: ['Хит', 'Скидка'],
 		tabs: ['0', '1']
 	},
@@ -43,7 +45,7 @@ export const boats = [
 				text: 'Реки и каналы, Нева, Малая и большая Невка, Финский залив'
 			}
 		],
-		url: '/',
+		url: `${PATH_PAGE.fleet}/fleet1`,
 		badges: ['Хит', 'Скидка'],
 		tabs: ['0']
 	},
@@ -67,7 +69,7 @@ export const boats = [
 				text: 'Реки и каналы, Нева, Малая и большая Невка, Финский залив'
 			}
 		],
-		url: '/',
+		url: `${PATH_PAGE.fleet}/fleet1`,
 		badges: ['Хит', 'Скидка'],
 		tabs: ['0', '1']
 	}

@@ -16,45 +16,56 @@ const next = ref(null);
 
 <template>
 	<div class="event-card-wrapper">
-		<Swiper
-			:slidesPerView="1"
-			:centeredSlides="false"
-			:prev="prev"
-			:next="next"
-			:spaceBetween="10"
-			:allowTouchMove="true"
-			:pagination="pagination"
-			:fade="true"
-			:breakpoints="{
-				0: {
-					allowTouchMove: false
-				},
-				1024: {
-					allowTouchMove: true
-				}
-			}"
-		>
-			<SwiperSlide v-for="(img, index) in event.imgs" :key="index">
-				<div class="image-wrapper">
-					<img :src="img" alt="" />
+		<div class="event-card-swiper-wrapper">
+			<div class="emoji-wrapper" v-if="event.emoji1 && event.emoji2">
+				<div class="emoji1">
+					<img :src="event.emoji1" alt="" />
 				</div>
-			</SwiperSlide>
-			<div class="pagination-wrapper">
-				<div class="pagination-inner">
-					<div ref="pagination" class="pagination pagination-line"></div>
+				<div class="emoji2">
+					<img :src="event.emoji2" alt="" />
 				</div>
 			</div>
-			<div class="navigation">
-				<div class="btns-wrapper">
-					<button ref="prev">
-						<img src="/images/arrow-v1-left.svg" alt="arrow" />
-					</button>
-					<button ref="next">
-						<img src="/images/arrow-v1-right.svg" alt="arrow" />
-					</button>
+			<Swiper
+				:slidesPerView="1"
+				:centeredSlides="false"
+				:prev="prev"
+				:next="next"
+				:spaceBetween="10"
+				:allowTouchMove="true"
+				:pagination="pagination"
+				:fade="true"
+				:breakpoints="{
+					0: {
+						allowTouchMove: false
+					},
+					1024: {
+						allowTouchMove: true
+					}
+				}"
+			>
+				<SwiperSlide v-for="(img, index) in event.imgs" :key="index">
+					<div class="image-wrapper">
+						<img :src="img" alt="" />
+					</div>
+				</SwiperSlide>
+				<div class="pagination-wrapper">
+					<div class="pagination-inner">
+						<div ref="pagination" class="pagination pagination-line"></div>
+					</div>
 				</div>
-			</div>
-		</Swiper>
+				<div class="navigation">
+					<div class="btns-wrapper">
+						<button ref="prev">
+							<img src="/images/arrow-v1-left.svg" alt="arrow" />
+						</button>
+						<button ref="next">
+							<img src="/images/arrow-v1-right.svg" alt="arrow" />
+						</button>
+					</div>
+				</div>
+			</Swiper>
+		</div>
+
 		<div class="content">
 			<Title variant="h4">
 				{{ event.title }}
@@ -74,6 +85,34 @@ const next = ref(null);
 
 .event-card-wrapper {
 	position: relative;
+	.emoji-wrapper {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		transition: var(--trs-300);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		.emoji1 {
+			width: 147px;
+			height: 147px;
+			@media (max-width: $tab) {
+				width: 70px;
+				height: 70px;
+			}
+		}
+		.emoji2 {
+			width: 180%;
+			position: absolute;
+			left: -30px;
+			@media (max-width: $tab) {
+				left: -10px;
+			}
+		}
+	}
 	.pagination-wrapper {
 		padding-bottom: 100%;
 		width: 100%;
@@ -109,7 +148,10 @@ const next = ref(null);
 			button {
 				background: rgba(255, 255, 255, 0.5);
 				border-radius: 999px;
+				border: none;
 				z-index: 2;
+				width: 45px;
+				height: 45px;
 				transition: var(--trs-300);
 				&:hover {
 					background: var(--white-color);

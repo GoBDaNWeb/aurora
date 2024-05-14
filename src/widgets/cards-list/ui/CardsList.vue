@@ -16,14 +16,26 @@ defineProps(['cards', 'haveBtn']);
 </template>
 
 <style lang="scss" scoped>
+@import '@/shared/styles/vars';
+
 .cards-list-wrapper {
 	margin-top: 48px;
 	margin-bottom: 112px;
+	@media (max-width: $tab) {
+		margin-top: 30px;
+	}
 	.cards-list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: 50px;
 		row-gap: 80px;
+		@media (max-width: $tab) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 40px;
+		}
+		@media (max-width: $tab-sm) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 	.btn-wrapper {
 		display: flex;

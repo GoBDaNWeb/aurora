@@ -1,6 +1,6 @@
 <script setup>
 import { watch } from 'vue';
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
 
 import { PATH_PAGE } from '@/shared/config';
 import { CloseIcon, TelegramIcon, WhatsappIcon } from '@/shared/icons';
@@ -9,7 +9,12 @@ import { Button } from '@/shared/ui';
 import { routes } from '../config';
 import { useMenuStore } from '../model';
 
+const route = useRoute();
+
 const menuStore = useMenuStore();
+watch(route, () => {
+	menuStore.isActive ? menuStore.handleOpenMenu() : null;
+});
 
 watch(
 	() => menuStore.isActive,

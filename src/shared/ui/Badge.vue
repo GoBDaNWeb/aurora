@@ -13,7 +13,9 @@
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 22px;
-	color: var(--black-color);
+	color: var(--green-color);
 	width: fit-content;
+	display: flex;
+	align-items: center;
 }
 </style>

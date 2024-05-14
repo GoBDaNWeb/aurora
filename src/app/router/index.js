@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { Event } from '@/pages/event';
 import { Events } from '@/pages/events';
 import { Fleet } from '@/pages/fleet';
+import { FleetInner } from '@/pages/fleet-inner';
 import { Home } from '@/pages/home';
 import { Route } from '@/pages/route';
 import { Routes } from '@/pages/routes';
@@ -41,6 +42,11 @@ const router = createRouter({
 			path: `${PATH_PAGE.events}/:slug`,
 			name: 'event',
 			component: Event
+		},
+		{
+			path: `${PATH_PAGE.fleet}/:slug`,
+			name: 'fleet-inner',
+			component: FleetInner
 		}
 	]
 });

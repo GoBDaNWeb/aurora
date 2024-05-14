@@ -8,7 +8,7 @@
 		<div class="footer-inner container">
 			<div class="top">
 				<div class="logo">
-					<img src="/images/logo-white.svg" alt="logo" />
+					<img src="/images/logo-sm.png" alt="logo" />
 				</div>
 				<ul class="info">
 					<li>ИП/ООО</li>
@@ -31,7 +31,7 @@
 @import '@/shared/styles/vars';
 
 .footer {
-	background: var(--blue-color);
+	background: var(--green-color);
 	.footer-border {
 		overflow: hidden;
 		padding-top: 12px;
@@ -56,6 +56,14 @@
 			@media (max-width: $tab-sm) {
 				grid-template-columns: 1fr;
 				gap: 64px;
+			}
+			.logo {
+				width: 80px;
+				height: 80px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
 			}
 			.info {
 				display: flex;

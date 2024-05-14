@@ -12,20 +12,20 @@ defineProps(['isActive', 'variant']);
 @import '@/shared/styles/vars';
 
 .tab.active {
-	border-color: var(--sky-2-color);
-	color: var(--blue-color);
+	border-color: var(--green-2-color);
+	color: var(--green-color);
 }
 .tab.button.active {
 	color: var(--white-color);
-	background: var(--sky-3-color);
+	background: var(--green-2-color);
 }
 .tab.button {
 	height: 48px;
-	padding: 0 33px;
+	padding: 0 30px;
 	border-radius: 8px;
-	color: var(--sky-3-color);
+	color: var(--green-2-color);
 	background: none;
-	border: 1px solid var(--sky-3-color);
+	border: 1px solid var(--green-2-color);
 }
 .tab {
 	font-weight: 500;

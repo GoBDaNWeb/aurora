@@ -91,6 +91,7 @@ const next = ref(null);
 
 	.swiper {
 		max-width: 420px;
+
 		.swiper-slide {
 			opacity: 0 !important;
 			transition: opacity var(--trs-300);

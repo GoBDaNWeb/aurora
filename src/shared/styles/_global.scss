@@ -17,7 +17,7 @@ body {
 	background: var(--white-color);
 	font-family: 'Montserrat', sans-serif;
 	font-optical-sizing: auto;
-	color: var(--blue-color);
+	color: var(--green-color);
 }
 
 .dp__main.error {
@@ -139,7 +139,7 @@ body {
 }
 .swiper-pagination.blue {
 	.swiper-pagination-bullet-active {
-		background: var(--blue-color) !important;
+		background: var(--green-color) !important;
 	}
 	.swiper-pagination-bullet {
 		background: var(--white-color);
