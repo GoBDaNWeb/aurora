@@ -14,7 +14,7 @@ defineProps(['mapCoords', 'mapId']);
 			<div class="info">
 				<a href="tel:8 800 000-00-00" class="phone">8 800 000-00-00</a>
 				<a href="mailto:info@product.ru" class="mail">info@product.ru</a>
-				<a href="#" class="requisites">Реквизиты</a>
+				<a href="#" class="secondary requisites">Реквизиты</a>
 			</div>
 
 			<div class="socials">
@@ -67,9 +67,9 @@ defineProps(['mapCoords', 'mapId']);
 			}
 			.mail {
 				margin-top: 30px;
-				font-size: 22px;
-				line-height: 30px;
-				color: var(--blue-light-color);
+				font-size: 16px;
+				line-height: 22px;
+				color: var(--green-2-color);
 				@media (max-width: $tab) {
 					margin-top: 15px;
 					font-size: 14px;
@@ -80,7 +80,10 @@ defineProps(['mapCoords', 'mapId']);
 				margin-top: 30px;
 				font-size: 22px;
 				line-height: 30px;
-				color: var(--blue-light-color);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				max-width: 200px;
 				@media (max-width: $tab) {
 					margin-top: 15px;
 					font-size: 14px;

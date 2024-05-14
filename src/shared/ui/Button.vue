@@ -35,6 +35,7 @@ button.primary {
 		background: var(--gold-hover-color);
 	}
 }
+a.secondary,
 button.secondary {
 	background: var(--green-2-color);
 	border-radius: 8px;
