@@ -22,6 +22,9 @@ const menuStore = useMenuStore();
 				</RouterLink>
 			</nav>
 			<div class="info">
+				<a href="tel:+7 (800) 750-50-00" class="phone-mob">
+					<img src="/images/phone.svg" alt="" />
+				</a>
 				<a href="tel:+7 (800) 750-50-00" class="tel">+7 (800) 750-50-00</a>
 				<div class="socials">
 					<a href="#"><TelegramIcon /></a>
@@ -94,20 +97,24 @@ const menuStore = useMenuStore();
 			align-items: center;
 			gap: 20px;
 			margin-bottom: 15px;
+			.phone-mob {
+				display: none;
+				@media (max-width: $desktop-md-2) {
+					display: block;
+				}
+			}
 			.features,
 			.socials {
 				display: flex;
 				align-items: center;
 				gap: 15px;
+				@media (max-width: $desktop-md-2) {
+					display: none;
+				}
 				a {
 					height: 24px;
 					width: 24px;
-					@media (max-width: $desktop-md-2) {
-						display: none;
-						&:nth-child(1) {
-							display: block;
-						}
-					}
+
 					svg {
 						width: 100%;
 						height: 100%;

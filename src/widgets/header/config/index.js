@@ -3,7 +3,7 @@ import { PATH_PAGE } from '@/shared/config';
 export const routes = [
 	{
 		title: 'О компании',
-		url: PATH_PAGE.home
+		url: PATH_PAGE.about
 	},
 	{
 		title: 'Флот',

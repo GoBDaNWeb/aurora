@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+import { About } from '@/pages/about';
 import { Event } from '@/pages/event';
 import { Events } from '@/pages/events';
 import { Fleet } from '@/pages/fleet';
@@ -17,6 +18,11 @@ const router = createRouter({
 			path: PATH_PAGE.home,
 			name: 'home',
 			component: Home
+		},
+		{
+			path: PATH_PAGE.about,
+			name: 'about',
+			component: About
 		},
 		{
 			path: PATH_PAGE.routes,
