@@ -13,10 +13,11 @@ defineProps(['boat']);
 const pagination = ref(null);
 const prev = ref(null);
 const next = ref(null);
+const isActive = ref(false);
 </script>
 
 <template>
-	<div class="boat-card">
+	<div class="boat-card" @mouseenter="isActive = true" @mouseleave="isActive = false">
 		<Swiper
 			:slidesPerView="1"
 			:centeredSlides="false"
@@ -42,7 +43,11 @@ const next = ref(null);
 			</SwiperSlide>
 			<div class="pagination-wrapper">
 				<div class="pagination-inner">
-					<div ref="pagination" class="pagination pagination-line"></div>
+					<div
+						ref="pagination"
+						class="pagination pagination-line"
+						:class="isActive ? 'anim' : ''"
+					></div>
 				</div>
 			</div>
 			<div class="navigation">
@@ -88,7 +93,15 @@ const next = ref(null);
 
 .boat-card {
 	position: relative;
-
+	&:hover {
+		.swiper {
+			.swiper-slide-active {
+				img {
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
 	.swiper {
 		max-width: 420px;
 
@@ -109,6 +122,7 @@ const next = ref(null);
 				height: 100%;
 				position: absolute;
 				object-fit: cover;
+				transition: var(--trs-2600);
 			}
 
 			.pagination {

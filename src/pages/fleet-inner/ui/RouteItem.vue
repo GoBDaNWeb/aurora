@@ -22,13 +22,24 @@ defineProps(['route']);
 </template>
 
 <style lang="scss" scoped>
+@import '@/shared/styles/vars';
+
 .route-item {
 	display: grid;
 	grid-template-columns: 1fr 0.47fr;
 	gap: 50px;
+	@media (max-width: $tab) {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
 	.image-wrapper {
 		padding-bottom: 60%;
 		position: relative;
+		border-radius: 8px;
+		overflow: hidden;
+		@media (max-width: $tab) {
+			padding-bottom: 50%;
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -39,6 +50,11 @@ defineProps(['route']);
 	.text {
 		h4 {
 			text-align: left;
+			text-transform: none;
+			@media (max-width: $tab) {
+				font-size: 24px;
+				line-height: 28px;
+			}
 		}
 		p {
 			margin-top: 15px;

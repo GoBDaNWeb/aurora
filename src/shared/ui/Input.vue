@@ -60,7 +60,7 @@ defineExpose({ value });
 	align-items: center;
 	justify-content: center;
 	height: 50px;
-	cursor: pointer;
+	cursor: url('../images/cursor-pointer.png'), auto;
 	transition: var(--trs-300);
 	&:hover {
 		background: var(--pink-color);

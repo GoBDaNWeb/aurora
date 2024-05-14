@@ -12,10 +12,11 @@ defineProps(['event']);
 const pagination = ref(null);
 const prev = ref(null);
 const next = ref(null);
+const isActive = ref(false);
 </script>
 
 <template>
-	<div class="event-card-wrapper">
+	<div class="event-card-wrapper" @mouseenter="isActive = true" @mouseleave="isActive = false">
 		<div class="event-card-swiper-wrapper">
 			<div class="emoji-wrapper" v-if="event.emoji1 && event.emoji2">
 				<div class="emoji1">
@@ -44,13 +45,17 @@ const next = ref(null);
 				}"
 			>
 				<SwiperSlide v-for="(img, index) in event.imgs" :key="index">
-					<div class="image-wrapper">
+					<RouterLink :to="event.url" class="image-wrapper">
 						<img :src="img" alt="" />
-					</div>
+					</RouterLink>
 				</SwiperSlide>
 				<div class="pagination-wrapper">
 					<div class="pagination-inner">
-						<div ref="pagination" class="pagination pagination-line"></div>
+						<div
+							ref="pagination"
+							class="pagination pagination-line"
+							:class="isActive ? 'anim' : ''"
+						></div>
 					</div>
 				</div>
 				<div class="navigation">
@@ -66,7 +71,7 @@ const next = ref(null);
 			</Swiper>
 		</div>
 
-		<div class="content">
+		<RouterLink :to="event.url" class="content">
 			<Title variant="h4">
 				{{ event.title }}
 			</Title>
@@ -76,7 +81,7 @@ const next = ref(null);
 			<Button variant="outline">
 				<RouterLink :to="event.url">Подробнее</RouterLink>
 			</Button>
-		</div>
+		</RouterLink>
 	</div>
 </template>
 
@@ -85,6 +90,15 @@ const next = ref(null);
 
 .event-card-wrapper {
 	position: relative;
+	&:hover {
+		.swiper {
+			.swiper-slide-active {
+				img {
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
 	.emoji-wrapper {
 		position: absolute;
 		z-index: 2;
@@ -114,7 +128,7 @@ const next = ref(null);
 		}
 	}
 	.pagination-wrapper {
-		padding-bottom: 100%;
+		padding-bottom: 80%;
 		width: 100%;
 		position: absolute;
 		top: 0;
@@ -130,7 +144,7 @@ const next = ref(null);
 		}
 	}
 	.navigation {
-		padding-bottom: 100%;
+		padding-bottom: 80%;
 		width: 100%;
 		position: absolute;
 		top: 0;
@@ -167,16 +181,21 @@ const next = ref(null);
 		.swiper-slide-active {
 			opacity: 1 !important;
 		}
+
 		.image-wrapper {
 			position: relative;
-			padding-bottom: 100%;
+			padding-bottom: 80%;
 			border-radius: 12px;
 			overflow: hidden;
+			display: block;
+
 			img {
 				width: 100%;
 				height: 100%;
 				position: absolute;
 				object-fit: cover;
+				transition: var(--trs-2600);
+				transform: scale(1);
 			}
 
 			.pagination {
@@ -190,6 +209,7 @@ const next = ref(null);
 	}
 	.content {
 		margin-top: 30px;
+		display: block;
 		@media (max-width: $tab) {
 			margin-top: 20px;
 		}

@@ -77,7 +77,7 @@ function handleAccordion(selectedIndex) {
 	display: flex;
 	flex-direction: column;
 	.btn-wrapper {
-		cursor: pointer;
+		cursor: url('../images/cursor-pointer.png'), auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

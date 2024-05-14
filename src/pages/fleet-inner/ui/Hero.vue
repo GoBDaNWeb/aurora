@@ -23,8 +23,12 @@ import { Badge, Button, Title } from '@/shared/ui';
 	display: grid;
 	grid-template-columns: 1fr 0.45fr;
 	grid-template-areas: 'swiper content' 'tabs content';
+	grid-template-rows: 1fr;
 	gap: 50px;
 	margin-top: 80px;
+	@media (max-width: $desktop-md-2) {
+		grid-template-columns: 1fr 0.6fr;
+	}
 	@media (max-width: $tab) {
 		grid-template-areas: 'swiper swiper' 'content content' 'tabs tabs';
 		margin-top: 40px;

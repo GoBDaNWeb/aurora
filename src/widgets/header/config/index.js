@@ -17,10 +17,10 @@ export const routes = [
 		title: 'Маршруты',
 		url: PATH_PAGE.routes
 	},
-	{
-		title: 'Услуги',
-		url: PATH_PAGE.home
-	},
+	// {
+	// 	title: 'Услуги',
+	// 	url: PATH_PAGE.home
+	// },
 	{
 		title: 'Контакты',
 		url: PATH_PAGE.home

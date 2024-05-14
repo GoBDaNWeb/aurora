@@ -15,11 +15,14 @@ button {
 }
 body {
 	background: var(--white-color);
+	cursor: url('../images/cursor.png'), auto;
 	font-family: 'Montserrat', sans-serif;
 	font-optical-sizing: auto;
 	color: var(--green-color);
 }
-
+.dp__pointer {
+	cursor: url('../images/cursor.png'), auto;
+}
 .dp__main.error {
 	.dp__input_wrap {
 		input {
@@ -117,6 +120,26 @@ body {
 	line-height: 37px;
 	font-family: 'ElMessiri', sans-serif;
 }
+.pagination-line.anim {
+	.swiper-pagination-bullet-active {
+		width: 100%;
+		background: rgba(255, 255, 255, 0.5) !important;
+		opacity: 1 !important;
+		z-index: 2;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: 5px;
+			animation: slidein 2600ms linear 0ms;
+			background: var(--white-color) !important;
+			z-index: 2;
+		}
+	}
+}
 .pagination-line {
 	width: 100%;
 	display: flex;
@@ -135,6 +158,7 @@ body {
 		background: var(--white-color) !important;
 		opacity: 1 !important;
 		z-index: 2;
+		position: relative;
 	}
 }
 .swiper-pagination.blue {
@@ -168,19 +192,28 @@ body {
 		opacity: 1;
 	}
 }
-@keyframes slidein {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
-	}
-}
+
 @keyframes scroll {
 	from {
 		transform: translateX(0);
 	}
 	to {
 		transform: translateX(calc(-100% - 20px));
+	}
+}
+@keyframes zoom {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.5);
+	}
+}
+@keyframes slidein {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
 	}
 }

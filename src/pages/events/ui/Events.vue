@@ -28,7 +28,7 @@ import { events } from '../config';
 			.event-card-wrapper {
 				.swiper {
 					max-width: 420px;
-					padding-bottom: 100%;
+					padding-bottom: 80%;
 					position: relative;
 					@media (max-width: $tab) {
 						max-width: 480px;

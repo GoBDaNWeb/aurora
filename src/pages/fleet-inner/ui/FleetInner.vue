@@ -21,9 +21,14 @@ import { boats, eventTabs, events } from '../config';
 	</main>
 </template>
 <style lang="scss">
+@import '@/shared/styles/vars';
+
 .fleet-inner-page {
 	.boats {
 		margin-bottom: 210px;
+		@media (max-width: $tab) {
+			margin-bottom: 104px;
+		}
 	}
 	.service {
 		background-image: url('../images/services/bg.jpg');
