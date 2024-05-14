@@ -67,6 +67,15 @@ const next = ref(null);
 	</div>
 </template>
 
+<style lang="scss">
+.hero-swiper-wrapper {
+	.fleet-inner-swiper {
+		.swiper-wrapper {
+			position: absolute !important;
+		}
+	}
+}
+</style>
 <style lang="scss" scoped>
 @import '@/shared/styles/vars';
 .hero-swiper-wrapper {
@@ -82,9 +91,7 @@ const next = ref(null);
 		@media (max-width: $tab) {
 			max-width: 1024px;
 		}
-		.swiper-wrapper {
-			position: absolute;
-		}
+
 		.swiper-slide {
 			opacity: 0 !important;
 			transition: opacity var(--trs-300);
