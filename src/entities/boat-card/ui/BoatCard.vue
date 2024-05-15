@@ -37,9 +37,9 @@ const isActive = ref(false);
 			}"
 		>
 			<SwiperSlide v-for="(img, index) in boat.imgs" :key="index">
-				<div class="image-wrapper">
+				<RouterLink :to="boat.url" class="image-wrapper">
 					<img :src="img" alt="boat" />
-				</div>
+				</RouterLink>
 			</SwiperSlide>
 			<div class="pagination-wrapper">
 				<div class="pagination-inner">
@@ -71,15 +71,18 @@ const isActive = ref(false);
 		</Swiper>
 
 		<div class="content">
-			<p class="price">{{ boat.price }} <span>₽ / час</span></p>
-			<Title variant="h5" v-html="boat.title"></Title>
-			<span class="guests">{{ boat.guests }}</span>
-			<ul>
-				<li v-for="(info, index) in boat.info" :key="index">
-					<span>{{ info.title }}</span>
-					<p>{{ info.text }}</p>
-				</li>
-			</ul>
+			<RouterLink :to="boat.url">
+				<p class="price">{{ boat.price }} <span>₽ / час</span></p>
+				<Title variant="h5" v-html="boat.title"></Title>
+				<span class="guests">{{ boat.guests }}</span>
+				<ul>
+					<li v-for="(info, index) in boat.info" :key="index">
+						<span>{{ info.title }}</span>
+						<p>{{ info.text }}</p>
+					</li>
+				</ul>
+			</RouterLink>
+
 			<div class="btns">
 				<Button variant="outline"><RouterLink :to="boat.url">Подробнее</RouterLink></Button>
 				<Button variant="primary">Забронировать</Button>
@@ -117,6 +120,7 @@ const isActive = ref(false);
 			padding-bottom: 65%;
 			border-radius: 8px;
 			overflow: hidden;
+			display: block;
 			img {
 				width: 100%;
 				height: 100%;
