@@ -5,7 +5,7 @@ import { RouterLink, RouterView, useRoute } from 'vue-router';
 import { Footer } from '@/widgets/footer';
 import { Header } from '@/widgets/header';
 
-import { Menu } from '@/shared/ui';
+import { Menu, OrderModal } from '@/shared/ui';
 
 const router = useRoute();
 
@@ -23,4 +23,5 @@ watch(router, () => {
 	<Menu />
 	<RouterView />
 	<Footer />
+	<OrderModal />
 </template>

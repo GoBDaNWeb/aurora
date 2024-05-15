@@ -41,13 +41,24 @@ import { Title } from '@/shared/ui';
 </template>
 
 <style lang="scss" scoped>
+@import '@/shared/styles/vars';
+
 .description {
 	margin-top: 106px;
+	@media (max-width: $tab) {
+		margin-top: 62px;
+	}
 	.description-inner {
 		margin-top: 73px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 50px;
+		@media (max-width: $desktop-sm) {
+			gap: 25px;
+		}
+		@media (max-width: $tab) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 		.description-item {
 			background: var(--green-light-2-color);
 			border-radius: 8px;
@@ -56,6 +67,9 @@ import { Title } from '@/shared/ui';
 			grid-template-rows: 0.4fr 1fr;
 			align-items: center;
 			gap: 37px;
+			@media (max-width: $tab) {
+				padding: 30px 15px 40px;
+			}
 			.image-wrapper {
 				display: flex;
 				justify-content: center;
@@ -64,6 +78,10 @@ import { Title } from '@/shared/ui';
 				font-weight: 400;
 				font-size: 16px;
 				line-height: 22px;
+				@media (max-width: $tab) {
+					font-size: 14px;
+					line-height: 19px;
+				}
 			}
 		}
 	}

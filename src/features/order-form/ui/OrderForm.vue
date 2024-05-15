@@ -4,14 +4,8 @@ import '@vuepic/vue-datepicker/dist/main.css';
 import { onMounted, reactive, watch } from 'vue';
 
 import { Button, Input, Select } from '@/shared/ui';
+import { format } from '@/shared/utils';
 
-const format = date => {
-	const day = date.getDate();
-	const month = date.getMonth() + 1;
-	const year = date.getFullYear();
-
-	return `${day}.${month}.${year}`;
-};
 const selectList = [
 	{ value: 'значение1', label: 'значение 1' },
 	{ value: 'значение2', label: 'значение 2' },

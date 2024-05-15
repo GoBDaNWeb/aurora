@@ -1,9 +1,9 @@
 <script setup>
 import Hero from './Hero.vue';
+import OrderForm from './OrderForm.vue';
 
 import { Boats } from '@/widgets/boats';
 import { Gallery } from '@/widgets/gallery';
-import { OrderForm } from '@/widgets/order-form';
 import { Service } from '@/widgets/service';
 
 import { services } from '@/shared/config';
