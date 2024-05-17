@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue';
 
 import { ClearIcon, SortIcon } from '@/shared/icons';
+import { Button } from '@/shared/ui';
 
 const props = defineProps(['options', 'modelValue', 'placeholder', 'error', 'name']);
 
@@ -9,9 +10,6 @@ const isActive = ref(null);
 
 const handleOpenSelect = () => {
 	isActive.value = !isActive.value;
-};
-const handleCloseSelect = () => {
-	isActive.value = false;
 };
 </script>
 

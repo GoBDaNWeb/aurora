@@ -1,6 +1,5 @@
 <script setup>
-import { OrderForm } from '@/features/order-form';
-
+import OrderForm from './OrderForm.vue'
 import { Title } from '@/shared/ui';
 </script>
 

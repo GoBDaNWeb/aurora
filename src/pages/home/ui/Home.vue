@@ -1,12 +1,12 @@
 <script setup>
 import Hero from './Hero.vue';
+import Routes from './Routes.vue';
 
 import { Boats } from '@/widgets/boats';
 import { Contacts } from '@/widgets/contacts';
 import { Events } from '@/widgets/events';
 import { Faq } from '@/widgets/faq';
 import { Gallery } from '@/widgets/gallery';
-import { Routes } from '@/widgets/routes';
 import { Service } from '@/widgets/service';
 
 import { services } from '@/shared/config';

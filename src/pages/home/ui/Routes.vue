@@ -5,7 +5,7 @@ import { ref, watch } from 'vue';
 
 import { Swiper } from '@/widgets/swiper';
 
-import { RouteAboutCard } from '@/entities/route-about-card';
+import  RouteAboutCard  from './RouteAboutCard.vue';
 
 import { Title } from '@/shared/ui';
 
